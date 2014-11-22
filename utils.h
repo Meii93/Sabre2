@@ -1,5 +1,9 @@
+#include <iostream>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
-void display (int[] t, int n)
+void display (int* t, int n)
 {
 	for(int i=0;i<n;i++)
 	{
@@ -7,7 +11,7 @@ void display (int[] t, int n)
 	}
 	cout<<endl;
 }
-int sum (int[] t, int n)
+int sum (int* t, int n)
 {
 	int sum = 0;
 	for(int i=0;i<n;i++)
@@ -26,7 +30,7 @@ int min( int* arr, int len)
 	}
 	return min;
 }
-int max( int[] t, int n)
+int max( int* t, int n)
 {
 	int max=t[0];
 	for(int i=1;i<n;i++)
@@ -38,9 +42,9 @@ int max( int[] t, int n)
 	}
 	return max;
 }
-int[] random()
+int* random()
 {
-	int [] tab=new tab[10];
+	int* tab=new int[10];
 	srand( time( NULL ) );
     for( int i = 0; i < 10; i++ )
          tab[i]=rand()%100 + 1;
