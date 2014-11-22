@@ -42,7 +42,7 @@ int max( int* t, int n)
 	}
 	return max;
 }
-int* random()
+int* generate()
 {
 	int* tab=new int[10];
 	srand( time( NULL ) );
